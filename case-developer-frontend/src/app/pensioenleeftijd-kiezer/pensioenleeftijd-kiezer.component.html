@@ -1,0 +1,10 @@
+<app-card>
+  <h1>Een zelf gekozen leeftijd</h1>
+  <div class="row">
+    <form [formGroup]="form" class="row">
+      <app-number-input formControlName="years" [max]="70" [min]="60" label="Jaren"></app-number-input>
+      <app-number-input formControlName="months" [max]="11" [min]="0" label="Maand(en)"></app-number-input>
+    </form>
+    <h2>{{ verwachteWaarde() | eur }}</h2>
+  </div>
+</app-card>
