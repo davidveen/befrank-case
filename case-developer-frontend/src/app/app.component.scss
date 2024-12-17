@@ -1,0 +1,28 @@
+:host {
+  display: block;
+}
+
+main {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  main {
+    width: 100vw;
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    width: 40vw;
+  }
+}

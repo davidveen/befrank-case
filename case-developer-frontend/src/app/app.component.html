@@ -1,8 +1,30 @@
-<div class="container">
-    <div>
-        <h1>Hoi!</h1>
-        <div>Succes met het maken van de case</div>
-        <div>Maak hier een frontend waarmee verbinding kan worden gemaakt met de applicatie</div>
+<main>
+  <app-card>
+    <h1>Uw gegevens</h1>
+    @let deelnemer = deelnemer$ | async;
+    @if (deelnemer) {
+    <ul>
+      <li>Naam: {{ deelnemer.naam.voornaam }} {{ deelnemer.naam.achternaam }}</li>
+      <li>Geboortedatum: {{ deelnemer.geboortedatum | date }} </li>
+      <li>Email: {{ deelnemer.email }}</li>
+    </ul>
+
+    <ul>
+      <li>Status: {{ deelnemer.status }}</li>
+      <li>Parttime %: {{ deelnemer.parttimePercentage }}</li>
+      <li>Fulltime salaris: {{ deelnemer.fulltimeSalaris | eur }}</li>
+    </ul>
+    }
+  </app-card>
+  <app-card>
+    <h1>Waarde op pensioenleeftijd</h1>
+    <div class="row">
+      <ul>
+        <li>Jaren: {{ pensioenleeftijd.years }}</li>
+        <li>Maand(en): {{ pensioenleeftijd.months }}</li>
+      </ul>
+      <h2>{{ verwachteWaarde() | eur }}</h2>
     </div>
-</div>
-<router-outlet></router-outlet>
+  </app-card>
+  <app-pensioenleeftijd-kiezer></app-pensioenleeftijd-kiezer>
+</main>
