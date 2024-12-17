@@ -1,0 +1,12 @@
+<label [for]="numberInput">{{label()}}</label>
+<div class="container">
+  <button (click)="decrement()">-</button>
+  <input #numberInput
+         type="number"
+         [step]="step()"
+         [min]="min()"
+         [max]="max()"
+         [value]="value"
+         (input)="onChange($any($event).target?.value)">
+  <button (click)="increment()">+</button>
+</div>
