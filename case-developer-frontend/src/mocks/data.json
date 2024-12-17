@@ -1,0 +1,48 @@
+{
+  "deelnemer": {
+    "BF1": {
+      "id": "BF1",
+      "rekeningnummer": "BF123456789",
+      "adres": {
+        "straat": "Test",
+        "huisnummer": "1a",
+        "plaats": "Utrecht",
+        "postcode": "1111aa"
+      },
+      "email": "waldo@pm.me",
+      "fulltimeSalaris": 60000,
+      "geboortedatum": "1964-12-01",
+      "naam": {
+        "achternaam": "Bar",
+        "initialen": "W.A.",
+        "voornaam": "Waldo"
+      },
+      "parttimePercentage": 80,
+      "status": "actief"
+    }
+  },
+  "regeling": {
+    "beschikbarePremiePercentage": 5,
+    "franchise": 15599
+  },
+  "rekening": {
+    "BF123456789": {
+      "id": "BF123456789",
+      "fondsen": [
+        {
+          "naam": "BF_Groen1",
+          "waarde": 40000
+        },
+        {
+          "naam": "BF_Hitchhiker42",
+          "waarde": 40000
+        },
+        {
+          "naam": "BF_Orthanc",
+          "waarde": 20000
+        }
+      ],
+      "jaarlijksRendement": 3
+    }
+  }
+}
