@@ -24,9 +24,8 @@ export class AppComponent implements OnInit {
   private readonly verwachteWaardeService = inject(VerwachteWaardeService);
 
   protected readonly pensioenleeftijd = { years: 67, months: 3 };
-
-  readonly deelnemer$ = this.deelnemerService.get();
-  readonly verwachteWaarde = this.verwachteWaardeService.verwachteWaarde;
+  protected readonly deelnemer$ = this.deelnemerService.get();
+  protected readonly verwachteWaarde = this.verwachteWaardeService.verwachteWaarde;
 
   ngOnInit(): void {
     this.verwachteWaardeService.update(this.pensioenleeftijd);

@@ -41,10 +41,10 @@ export class Deelnemer {
       const periodePremie = jaarlijksePremie / 12 * periode;
 
       return opbouw(
-        waarde +
-        periodePremie +
-        (waarde + periodePremie / 2) *
-        (rekening.jaarlijksRendement / 100),
+        waarde
+        + periodePremie
+        + (waarde + periodePremie / 2)
+        * (rekening.jaarlijksRendement / 100),
         maanden - periode
       );
     }
@@ -53,8 +53,8 @@ export class Deelnemer {
   private jaarlijksePremie(regeling: Regeling) {
     if (this.#data.status !== 'actief') { return 0; }
 
-    return (this.#data.fulltimeSalaris - regeling.franchise) *
-      (this.#data.parttimePercentage / 100) *
-      (regeling.beschikbarePremiePercentage / 100);
+    return (this.#data.fulltimeSalaris - regeling.franchise)
+      * (this.#data.parttimePercentage / 100)
+      * (regeling.beschikbarePremiePercentage / 100);
   }
 }
