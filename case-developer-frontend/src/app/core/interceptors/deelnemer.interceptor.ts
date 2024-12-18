@@ -30,6 +30,6 @@ export function deelnemerInterceptor(req: HttpRequest<unknown>, next: HttpHandle
     return request.method === 'GET' &&
       request.url
         .split(`${environment.apiUrl}/`)
-        .pop() === 'deelnemer';
+        .pop()?.startsWith('deelnemer');
   }
 }
